@@ -1,0 +1,16 @@
+<h2>All Your Songs <em>Boo</em></h2>
+<h3>XOXOXOXOXO: <%= params[:user_name] %> </h3>
+
+<ul>
+<% @songs.each do |song| %>
+  <li><%= link_to song.title, song %></li>
+<% end %>
+</ul>
+
+<%= link_to "Add a New JAM!!!", new_song_path %>
+<br>
+<%= link_to "Logout, brah", logout_path, method: :delete %>
+
+<div id="bye">
+  <%= flash[:later] %>
+</div>

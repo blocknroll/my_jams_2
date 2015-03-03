@@ -1,0 +1,6 @@
+<h1>This is your shitty song:<%= @song.title %></h1>
+<h4>This is the shitty artist:<%= @song.artist %></h4>
+
+<%= link_to "Song Index", songs_path%><p>
+<%= link_to "Edit this jam", edit_song_path(@song)%><p>
+<%= link_to "DESTROY! DESTROY!", song_path(@song), method: :delete %>
