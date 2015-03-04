@@ -32,18 +32,16 @@ class UserIntegrationTest < ActionDispatch::IntegrationTest
   end
 
 
+  test "registered user should only see their own songs" do
+
+  end
+
+
 end
 
-#
-# ---
-#
-# Work Time: Authorization Mini-Project (1:00 - 4:00)
-#
-# This afternoon complete a short project focused on authorization in Classroom C.
-#
-# Add the following user stories to your MyJams projects:
-#
-# ``` As an exisiting user When I visit '/songs' Then I should see only songs associated with my account
+
+
+# As an exisiting user When I visit '/songs' Then I should see only songs associated with my account
 #
 # As an existing user When I visit my profile Then I should see my profile
 #
