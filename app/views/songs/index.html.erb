@@ -1,5 +1,5 @@
 <h2>All Your Songs <em>Boo</em></h2>
-<h3>XOXOXOXOXO: <%= params[:user_name] %> </h3>
+<h3>XOXOXOXOXO: <%= current_user.user_name if current_user%> </h3>
 
 <ul>
 <% @songs.each do |song| %>

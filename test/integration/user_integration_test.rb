@@ -27,9 +27,26 @@ class UserIntegrationTest < ActionDispatch::IntegrationTest
     visit songs_path(user)
     click_link_or_button "Logout, brah"
     within('#bye') do
-      asser page.has_content?("Later, brah")
+      assert page.has_content?("Later, brah")
     end
   end
 
 
 end
+
+#
+# ---
+#
+# Work Time: Authorization Mini-Project (1:00 - 4:00)
+#
+# This afternoon complete a short project focused on authorization in Classroom C.
+#
+# Add the following user stories to your MyJams projects:
+#
+# ``` As an exisiting user When I visit '/songs' Then I should see only songs associated with my account
+#
+# As an existing user When I visit my profile Then I should see my profile
+#
+# As a non-exisiting user When I visit a users profile Then I should be redirected to the home page And I should see a flash alert saying "Not authorized."
+#
+# As an admin user When I visit a users profile Then I should see the profile information for that user ```

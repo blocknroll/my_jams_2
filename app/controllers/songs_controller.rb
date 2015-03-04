@@ -18,6 +18,7 @@ class SongsController < ApplicationController
       if @song.save
         redirect_to @song
       else
+        flash[:blank_song] = "You have to input something... :/"
         render :new
       end
       # song.save? ? redirect_to song : render :new
@@ -44,7 +45,6 @@ class SongsController < ApplicationController
     def set_song
       @song = Song.find(params[:id])
     end
-
 
     def song_params
       params.require(:song).permit(:title, :artist)
